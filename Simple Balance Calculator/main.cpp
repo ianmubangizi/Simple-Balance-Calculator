@@ -20,30 +20,39 @@ join;
 int     items,
 visit = 0;
 
-// Input function
-int _input(string a, bool b) {
+// Input Validate Function
+int _inputValidate(string a , bool b) {
     string c;
     bool d = true;
+    int e;
+
+    string _yesInput[3] = {"YES", "Yes", "yes"};
+    string _noInput[3]  = {"NO","No","no"};
 
     while (d == true) {
-        if ((a == (string)"Yes") or (a == (string)"yes")) {
-            b = true;
-            d = false;
-        } else if ((a == (string)"No") or (a == (string)"no")) {
-            b = false;
-            d = false;
-        } else {
-            cout << "Invaild Input!\n\nPlease Try Again : ";
-            cin >> c;
-            a = c;
+        for (e = 0; e < 3; e++) {
+            if (a == _yesInput[e]) {
+                b = true;
+                d = false;
+                e = 3;
+            } else if (a == _noInput[e]) {
+                b = false;
+                d = false;
+                e = 3;
+            } else if ((e == 2 ) && (a != _yesInput[e] && a != _noInput[e])){
+                cout << "Invaild Input!\n\nPlease Try Again : ";
+                cin >> c;
+                a = c;
+            }
         }
     }
+
     return b;
 }
 
 // Main
 int main() {
-    int _input(string a, bool b);
+    int _inputValidate(string a, bool b);
     
     // Main Loop Statment
     do {
@@ -59,7 +68,7 @@ int main() {
             cin >> input;
             
             
-            if (_input(input ,spend)) {
+            if (_inputValidate(input ,spend)) {
                 spend = true;
             } else {
                 spend = false;
@@ -134,7 +143,7 @@ int main() {
     cout << "\n";
     cout << "Do you want to buy a New Vocucher? : ";
     cin >> input;
-    _input(input, join);
+    _inputValidate(input, join);
     
     // End
     
