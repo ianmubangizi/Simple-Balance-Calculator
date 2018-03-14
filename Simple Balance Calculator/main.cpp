@@ -67,7 +67,7 @@ visit = 0;
                              d = true;
                              break;
                      }
-                 } else if ((e == 2 ) && (a != _yesInput[e] && a != _noInput[e])){
+                 } else if ((e == 2 ) && (a != _yesInput[e] && a != _noInput[e] && a != _options[e])){
                      cout << "Invaild Input!\n\nPlease Try Again : ";
                      cin >> c;
                      a = c;
