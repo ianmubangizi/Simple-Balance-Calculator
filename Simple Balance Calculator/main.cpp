@@ -41,32 +41,9 @@ visit = 0;
                      d = false;
                      e = 3;
                  } else if (a == _options[e]) {
-                     switch (e) {
-                         case 0:
-                             if (a == _options[e]) {
-                                 b = true;
-                                 d = false;
-                                 e = 3;
-                             }
-                             break;
-                         case 1:
-                             if (a == _options[e]) {
-                                 b = true;
-                                 d = false;
-                                 e = 3;
-                             }
-                             break;
-                         case 2:
-                             if (a == _options[e]) {
-                                 b = true;
-                                 d = false;
-                                 e = 3;
-                             }
-                             break;
-                         default:
-                             d = true;
-                             break;
-                     }
+                     b = true;
+                     d = false;
+                     e = 3;
                  } else if ((e == 2 ) && (a != _yesInput[e] && a != _noInput[e] && a != _options[e])){
                      cout << "Invaild Input!\n\nPlease Try Again : ";
                      cin >> c;
