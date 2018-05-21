@@ -12,24 +12,20 @@
 using namespace std;
 
 // Global Variables
-double  balance = 0,
-_balance = 0;
+double  balance = 0, _balance = 0;
 string  input;
-bool    spend = false,
-join = false;
-int     items,
-visit = 0;
+bool    spend = false, join = false;
+int     items, visit = 0;
 
 // Input Validate Function
     int _inputValidate(string a, bool b) {
         string c;
         bool d = true;
         int e;
-
         string _yesInput[3] = {"YES", "Yes", "yes"};
         string _noInput[3]  = {"NO","No","no"};
         string _options[3]  = {"1", "2", "3"};
-
+// fix this later (if) checks can be less!
         while (d == true) {
             for (e = 0; e < 3; e++) {
                  if (a == _yesInput[e]) {
@@ -57,7 +53,6 @@ visit = 0;
 
 // Main
 int main() {
-
     int _inputValidate(string a, bool b);
 
     // Main Loop Statment
